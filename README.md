@@ -1,4 +1,4 @@
-# Software FJ — Sistema Integral de Gestión de Clientes, Servicios y Reservas
+# Sistema Integral de Gestión de Clientes, Servicios y Reservas
 
 Sistema orientado a objetos desarrollado en Python para la gestión de clientes, servicios y reservas de la empresa Software FJ. Proyecto académico del curso Programación Orientada a Objetos (Código 213023) — Universidad Nacional Abierta y a Distancia (UNAD).
 
@@ -158,7 +158,7 @@ Cada operación del sistema queda registrada automáticamente en `logs/sistema_f
 | Nombre | Usuario GitHub |
 |---|---|
 | John Rincon | @usuario |
-| *(pendiente)* | — |
+| Cesar Enciso | @usuario 
 | *(pendiente)* | — |
 | *(pendiente)* | — |
 | *(pendiente)* | — |

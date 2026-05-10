@@ -1,5 +1,5 @@
 # MÓDULO 6: reserva.py
-# Este módulo define la clase Reserva que integra un cliente con un servicio
+# Este módulo define la clase Reserva que integra un cliente con un servicio 
 # Implementa confirmación, cancelación y procesamiento con manejo completo de excepciones usando try/except, try/except/else y try/except/finally.
 
 import datetime

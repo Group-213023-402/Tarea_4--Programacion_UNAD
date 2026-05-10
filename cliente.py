@@ -1,7 +1,7 @@
 # MÓDULO 4: cliente.py
 # Este modulo define la clase Cliente que representa a cada persona que solicita servicios en la empresa Software FJ.
 # La clase hereda de EntidadBase y agrega validaciones estrictas sobre los datos personales del cliente como nombre, email y teléfono.
-# Aplica encapsulación para proteger los datos sensibles del cliente.
+# Aplica encapsulación para proteger los datos sensibles del cliente .
 
 import re
 # Este módulo re permite trabajar con expresiones regulares en Python

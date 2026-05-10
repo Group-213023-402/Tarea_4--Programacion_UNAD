@@ -1,7 +1,7 @@
 # MÓDULO 8: main.py
 # Este es el archivo principal del sistema. Al ejecutarlo se pone en marcha todo el programa y se simulan más de 10 operaciones completas que incluyen
 # registros válidos e inválidos de clientes, creación correcta e incorrecta de servicios, y reservas exitosas y fallidas.
-# El sistema demuestra que puede continuar funcionando aunque ocurran errores.
+# El sistema demuestra que puede continuar funcionando aunque ocurran errores .
 
 from gestor import GestorSistema
 from excepciones import (
