@@ -88,8 +88,7 @@ def ejecutar_operacion(descripcion, funcion, *args, **kwargs):
 def main():
 
     logger.separador("INICIO DEL SISTEMA SOFTWARE FJ")
-    print("\n  Bienvenido al Sistema Integral de Gestión")
-    print("  Software FJ - UNAD | Programación Orientada a Objetos")
+    print("\n  Bienvenido al Sistema Integral de Gestión de Clientes, Servicios y Reservas.")
 
     # Creamos la instancia central del sistema
     gestor = GestorSistema()
@@ -119,23 +118,23 @@ def main():
         "3040506070", "Carlos Ruiz", "carlos.ruiz@outlook.com", "3201112233"
     )
 
-    # Operación 4: intentar registrar cliente con email inválido (debe fallar)
+    # Operación 4: intentar registrar cliente con email inválido (debe mostar error pero no detener el sistema)
     ejecutar_operacion(
-        "Registrar cliente con email inválido (debe fallar)",
+        "Registrar cliente con email inválido",
         gestor.registrar_cliente,
         "4050607080", "Pedro Mora", "correoSinArroba", "3151234567"
     )
 
-    # Operación 5: intentar registrar cliente duplicado (debe fallar)
+    # Operación 5: intentar registrar cliente duplicado (debe mostrar error pero no detener el sistema)
     ejecutar_operacion(
-        "Registrar cliente duplicado con documento 1020304050 (debe fallar)",
+        "Registrar cliente duplicado con documento 1020304050)",
         gestor.registrar_cliente,
         "1020304050", "Juan Repetido", "otro@gmail.com", "3001111111"
     )
 
-    # Operación 6: intentar registrar cliente con nombre con números (debe fallar)
+    # Operación 6: intentar registrar cliente con nombre con números (debe mostrar error pero no detener el sistema)
     ejecutar_operacion(
-        "Registrar cliente con nombre inválido (debe fallar)",
+        "Registrar cliente con nombre inválido",
         gestor.registrar_cliente,
         "5060708090", "Ana123 Gómez", "ana@gmail.com", "3161234567"
     )
@@ -167,16 +166,16 @@ def main():
         "SRV-003", "Asesoría en Python", "Consultoría en Python para empresas", 120000, "Desarrollo de Software", "experto"
     )
 
-    # Operación 10: intentar registrar sala con tarifa negativa (debe fallar)
+    # Operación 10: intentar registrar sala con tarifa negativa
     ejecutar_operacion(
-        "Registrar sala con tarifa negativa (debe fallar)",
+        "Registrar sala con tarifa negativa",
         gestor.registrar_sala,
         "SRV-004", "Sala Inválida", "Esta sala no debería crearse", -50000, 8
     )
 
-    # Operación 11: intentar registrar asesoría con nivel inválido (debe fallar)
+    # Operación 11: intentar registrar asesoría con nivel inválido 
     ejecutar_operacion(
-        "Registrar asesoría con nivel inválido (debe fallar)",
+        "Registrar asesoría con nivel inválido",
         gestor.registrar_asesoria,
         "SRV-005", "Asesoría Inválida", "Esta asesoría no debería crearse", 100000, "Marketing", "dios"
     )
@@ -209,23 +208,23 @@ def main():
         "3040506070", "SRV-003", 2, True, 15
     )
 
-    # Operación 15: intentar crear reserva con duración negativa (debe fallar)
+    # Operación 15: intentar crear reserva con duración negativa
     ejecutar_operacion(
-        "Crear reserva con duración negativa (debe fallar)",
+        "Crear reserva con duración negativa",
         gestor.crear_reserva,
         "1020304050", "SRV-001", -5
     )
 
-    # Operación 16: intentar crear reserva con cliente inexistente (debe fallar)
+    # Operación 16: intentar crear reserva con cliente inexistente
     ejecutar_operacion(
-        "Crear reserva con cliente inexistente (debe fallar)",
+        "Crear reserva con cliente inexistente",
         gestor.crear_reserva,
         "9999999999", "SRV-001", 2
     )
 
-    # Operación 17: intentar crear reserva con servicio deshabilitado (debe fallar)
+    # Operación 17: intentar crear reserva con servicio deshabilitado
     ejecutar_operacion(
-        "Deshabilitar sala y crear reserva sobre ella (debe fallar)",
+        "Deshabilitar sala y crear reserva sobre ella",
         lambda: [
             gestor.deshabilitar_servicio("SRV-001"),
             gestor.crear_reserva("1020304050", "SRV-001", 2)
@@ -264,9 +263,9 @@ def main():
         print(f"\n  Estado final de {r2.identificador}: {r2.estado}")
 
     if r1:
-        # Operación 20: intentar cancelar reserva ya finalizada (debe fallar)
+        # Operación 20: intentar cancelar reserva ya finalizada 
         ejecutar_operacion(
-            f"Cancelar reserva ya finalizada {r1.identificador} (debe fallar)",
+            f"Cancelar reserva ya finalizada {r1.identificador}",
             gestor.cancelar_reserva,
             r1.identificador, "intento inválido"
         )
@@ -274,7 +273,7 @@ def main():
     if r2:
         # Operación 21: intentar confirmar reserva ya cancelada (debe fallar)
         ejecutar_operacion(
-            f"Confirmar reserva ya cancelada {r2.identificador} (debe fallar)",
+            f"Confirmar reserva ya cancelada {r2.identificador} ",
             gestor.confirmar_reserva, r2.identificador
         )
 
