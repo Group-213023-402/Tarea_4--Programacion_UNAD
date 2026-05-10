@@ -94,7 +94,7 @@ def main():
     # Creamos la instancia central del sistema
     gestor = GestorSistema()
 
-    # Bloque 1, Para el registro de clientes
+    # BLOQUE 1: REGISTRO DE CLIENTES
 
     separador("BLOQUE 1: REGISTRO DE CLIENTES")
 
@@ -119,14 +119,14 @@ def main():
         "3040506070", "Carlos Ruiz", "carlos.ruiz@outlook.com", "3201112233"
     )
 
-    # Operación 4: intentar registrar cliente con email inválido, esto deberia fallar
+    # Operación 4: intentar registrar cliente con email inválido (debe fallar)
     ejecutar_operacion(
         "Registrar cliente con email inválido (debe fallar)",
         gestor.registrar_cliente,
         "4050607080", "Pedro Mora", "correoSinArroba", "3151234567"
     )
 
-    # Operación 5: intentar registrar cliente duplicado, esto debe fallar
+    # Operación 5: intentar registrar cliente duplicado (debe fallar)
     ejecutar_operacion(
         "Registrar cliente duplicado con documento 1020304050 (debe fallar)",
         gestor.registrar_cliente,
@@ -142,8 +142,7 @@ def main():
 
     print(f"\n  Clientes registrados exitosamente: {len(gestor.listar_clientes())}")
 
-
-    # Bloque 2, Para el registro de servicios
+    # BLOQUE 2: REGISTRO DE SERVICIOS
 
     separador("BLOQUE 2: REGISTRO DE SERVICIOS")
 
@@ -168,14 +167,14 @@ def main():
         "SRV-003", "Asesoría en Python", "Consultoría en Python para empresas", 120000, "Desarrollo de Software", "experto"
     )
 
-    # Operación 10: intentar registrar sala con tarifa negativa, esto deberia fallar
+    # Operación 10: intentar registrar sala con tarifa negativa (debe fallar)
     ejecutar_operacion(
         "Registrar sala con tarifa negativa (debe fallar)",
         gestor.registrar_sala,
         "SRV-004", "Sala Inválida", "Esta sala no debería crearse", -50000, 8
     )
 
-    # Operación 11: intentar registrar asesoría con nivel inválido, esto deberia fallar
+    # Operación 11: intentar registrar asesoría con nivel inválido (debe fallar)
     ejecutar_operacion(
         "Registrar asesoría con nivel inválido (debe fallar)",
         gestor.registrar_asesoria,
@@ -184,7 +183,8 @@ def main():
 
     print(f"\n  Servicios registrados exitosamente: {len(gestor.listar_servicios())}")
 
-    # Bloque 3 Para la creacion y gestion de reservas
+
+    # BLOQUE 3: CREACIÓN Y GESTIÓN DE RESERVAS
 
     separador("BLOQUE 3: CREACIÓN Y GESTIÓN DE RESERVAS")
 
@@ -209,14 +209,14 @@ def main():
         "3040506070", "SRV-003", 2, True, 15
     )
 
-    # Operación 15: intentar crear reserva con duración negativa, esto deberia fallar
+    # Operación 15: intentar crear reserva con duración negativa (debe fallar)
     ejecutar_operacion(
         "Crear reserva con duración negativa (debe fallar)",
         gestor.crear_reserva,
         "1020304050", "SRV-001", -5
     )
 
-    # Operación 16: intentar crear reserva con cliente inexistente, esto deberia fallar
+    # Operación 16: intentar crear reserva con cliente inexistente (debe fallar)
     ejecutar_operacion(
         "Crear reserva con cliente inexistente (debe fallar)",
         gestor.crear_reserva,
@@ -234,7 +234,7 @@ def main():
     # Volvemos a habilitar la sala para las siguientes operaciones
     gestor.habilitar_servicio("SRV-001")
 
-    # Bloque 4, para ciclo de vida de las reservas
+    # BLOQUE 4: CICLO DE VIDA DE LAS RESERVAS
     
     separador("BLOQUE 4: CICLO DE VIDA DE LAS RESERVAS")
 
@@ -264,7 +264,7 @@ def main():
         print(f"\n  Estado final de {r2.identificador}: {r2.estado}")
 
     if r1:
-        # Operación 20: intentar cancelar reserva ya finalizada, esto deberia fallar
+        # Operación 20: intentar cancelar reserva ya finalizada (debe fallar)
         ejecutar_operacion(
             f"Cancelar reserva ya finalizada {r1.identificador} (debe fallar)",
             gestor.cancelar_reserva,
@@ -272,14 +272,15 @@ def main():
         )
 
     if r2:
-        # Operación 21: intentar confirmar reserva ya cancelada, esto deberia fallar
+        # Operación 21: intentar confirmar reserva ya cancelada (debe fallar)
         ejecutar_operacion(
             f"Confirmar reserva ya cancelada {r2.identificador} (debe fallar)",
             gestor.confirmar_reserva, r2.identificador
         )
 
-    # Bloque 5, para consultas y resumen final
 
+    # BLOQUE 5: CONSULTAS Y RESUMEN FINAL
+    
     separador("BLOQUE 5: CONSULTAS Y RESUMEN FINAL")
 
     print("\n  Listado de clientes activos:")
