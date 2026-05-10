@@ -158,7 +158,7 @@ Cada operación del sistema queda registrada automáticamente en `logs/sistema_f
 | Nombre | Usuario GitHub |
 |---|---|
 | John Rincon | @usuario |
-| *(pendiente)* | — |
+| Cesar Enciso | @usuario 
 | *(pendiente)* | — |
 | *(pendiente)* | — |
 | *(pendiente)* | — |
