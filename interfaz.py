@@ -116,21 +116,24 @@ class AplicacionSoftwareFJ:
         encabezado.pack(fill="x")
         encabezado.pack_propagate(False)
 
+        # MEJORA: Se añadió la versión del sistema (v1.1)
         tk.Label(
             encabezado,
-            text="  SOFTWARE FJ  —  Sistema Integral de Gestión",
+            text="  SOFTWARE FJ  —  Sistema Integral de Gestión v1.1",
             font=("Consolas", 14, "bold"),
             bg=COLOR_BOTON,
             fg="#ffffff"
         ).pack(side="left", padx=20, pady=15)
 
+        # MEJORA: Se añadió el crédito del colaborador y se resaltó la fuente
         tk.Label(
             encabezado,
-            text="UNAD · POO · 213023",
-            font=("Consolas", 9),
+            text="UNAD · POO · 213023 | Colaborador: (Cesar Enciso)",
+            font=("Consolas", 9, "bold"),
             bg=COLOR_BOTON,
-            fg="#ffcccc"
+            fg="#ffffff"
         ).pack(side="right", padx=20)
+
 
     def _construir_pestanas(self):
         # Contenedor principal de pestañas
