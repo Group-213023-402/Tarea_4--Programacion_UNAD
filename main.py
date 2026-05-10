@@ -310,8 +310,16 @@ def main():
     gestor.imprimir_resumen()
 
     logger.separador("FIN DE LA SIMULACIÓN DEL SISTEMA SOFTWARE FJ")
-    print("\n  Sistema ejecutado exitosamente.")
-    print("  Revisa el archivo logs/sistema_fj.log para ver el registro completo.\n")
+    
+    # MEJORA: Banner final interactivo y visual para la consola
+    print("\n" + "═" * 60)
+    print(" 🚀 SIMULACIÓN FINALIZADA CON ÉXITO 🚀".center(60))
+    print("═" * 60)
+    print(" 👨‍💻 Desarrollador : (Escribe tu nombre aquí)")
+    print(" 🛡️  Estado        : El sistema demostró resiliencia ante errores.")
+    print(" 📂 Auditoría     : Revisa el archivo 'logs/sistema_fj.log'.")
+    print("═" * 60)
+    print(" ¡Gracias por utilizar Software FJ!\n")
 
 
 # Punto de entrada del programa
